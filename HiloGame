@@ -1,0 +1,29 @@
+#Oriana Soliz Lara
+#HILOGAME
+
+import random
+h=0
+l=0
+y=0
+score=300
+letter_user_two="y"
+while letter_user_two=="y":
+    number=random.randint(1,13)
+    number_two=random.randint(1,13)
+    print("The card is: "+ str(number))
+   #print("Higher or Lower?  [h/l]")
+    letter_user=input("Higher or Lower?  [h/l] ")
+    print("Next card was:"+str(number_two))
+    if letter_user=="h":
+       if number_two>number:
+          score=score+100
+       if number_two<number:
+          score=score-75
+    if letter_user=="l":
+       if number_two<number:
+          score=score+100
+       if number_two>number:
+          score=score-75
+    print("Your score is:"+str(score))
+    #print("Play again? [y/n]")
+    letter_user_two=input("Play again? [y/n] ")
